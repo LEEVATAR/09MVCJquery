@@ -9,11 +9,11 @@
 <head>
 	<meta charset="EUC-KR">
 	
-	<title>Model2 MVC Shop</title>
+	<title>09. Model2 MVC Shop</title>
 	
 	<link href="/css/left.css" rel="stylesheet" type="text/css">
 	
-	<!-- CDN(Content Delivery Network) 호스트 사용 -->
+	<!-- CDN(Content Delivery Network) 호스트 사용 0228 손댈거없는듯함? -->
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
 	
@@ -50,7 +50,7 @@
 	<td height="10" >&nbsp;</td>
   </tr>
   <tr>
-    <td width="800" height="30"><h2>Model2 MVC Shop</h2></td>
+    <td width="800" height="30"><h2>09. Model2 MVC Shop</h2></td>
   </tr>
   <tr>
     <td height="20" align="right" background="/images/img_bg.gif">
