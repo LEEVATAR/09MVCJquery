@@ -43,7 +43,7 @@ $(function() {
 			//alert(  $( "td.ct_btn01:contains('확인')" ).html() );
 			self.location = "/product/listProduct?menu=manage"
 		});
-	 $( "td.ct_btn01:contains('수정')" ).on("click" , function() {
+	 $( "td.ct_btn01:contains('구매')" ).on("click" , function() {
 			//Debug..
 			//alert(  $( "td.ct_btn01:contains('수정')" ).html() );
 			self.location = "/purchase/addPurchaseView?prod_no=${product.prodNo}";

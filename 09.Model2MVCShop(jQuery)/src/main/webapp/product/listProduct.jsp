@@ -17,7 +17,7 @@
 		//document.getElementById("menu").value = menu;
 	   	//document.detailForm.submit();
 	   	$("#currentPage").val(currentPage)
-	    $("#menu").val(menu)
+	    $("#param.menu").val(menu)
 	   	//$("#menu").val(menu)
 	   	$("form").attr("method" , "POST").attr("action" , "/product/listProduct").submit();
 	}
@@ -73,7 +73,6 @@
 						//alert(selflocation);
 						self.location ="/product/getProduct?prodNo="+$(this).children('input:hidden').val()+"&menu="+$('#menu').attr('name');
 					}
-					
 			});
 			/*
 			$( ".prodNo" ).on("click" , function() {
@@ -211,21 +210,20 @@
 		<tr class="ct_list_pop">
 			<td align="center">${ i }</td>
 			<td></td>
-			<td align="left">
+			<td align="left"> 
 			<c:choose>
 				<c:when test = "${param.menu eq 'manage'}">
 			<!-- a href="/product/updateProduct?prodNo=${product.prodNo}&menu=manage">${product.prodName}</a> -->
 			<input type="hidden" id="menu" name="manage" class="manage_prodNo" value="${product.prodNo }"/>
 			<!-- input type="hidden" id="manageprodNo" name="prodNo" value="${product.prodNo}" title="${product.prodName }"/> -->
-				${product.prodName}
 				</c:when>
 				<c:when test = "${param.menu eq 'search'}">
 			<!-- a href="/product/getProduct?prodNo=${product.prodNo}&menu=search">${product.prodName}</a> -->
 			<input type="hidden" id="menu" name="search" class="search_prodNo" value="${product.prodNo }"/>
 			<!-- input type="hidden" id="searchprodNo" name="prodNo" value="${product.prodNo}" title="${product.prodNo }"/> -->	
-				${product.prodName}
 				</c:when>
 			</c:choose>
+			${product.prodName}
 			</td>
 			<td></td>
 			<td align="left">${product.price}</td>
@@ -244,16 +242,7 @@
 	<tr>
 		<td align="center">
 		    <input type="hidden" id="currentPage" name="currentPage" value=""/>
-			<!-- 
-			<c:choose>
-				<c:when test = "${param.menu eq 'manage'}">
-				<input type="hidden" id="menu" name="manage" value="manage"/>
-				</c:when>
-				<c:when test = "${param.menu eq 'search'}">
-				<input type="hidden" id="menu" name="search" value="search"/>
-				</c:when>
-			</c:choose>
-			 -->
+			
 			<jsp:include page="../common/pageNavigator.jsp"/>
     	</td>
 	</tr>
